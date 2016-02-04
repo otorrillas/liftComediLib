@@ -18,9 +18,8 @@ $ ./comedi_install.sh
 
 
 #### Contributors
-- **C++**: @otorrillas
-- **Python**: @otorrillas
-
-Please, feel free to contribute if you! :blush:
+[@otorrillas](https://github.com/otorrillas): C++, Python.  
+  
+Please, feel free to contribute if you! :+1:  
 Either make a pull request or send me a message.  
-If you find any bug, please, open a new [Issue](https://github.com/otorrillas/liftComediLib/issues).
+If you find any bug, please, open a new [issue](https://github.com/otorrillas/liftComediLib/issues).
