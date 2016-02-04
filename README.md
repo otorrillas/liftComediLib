@@ -19,5 +19,5 @@ For installing libComedi into your computer, you can run **comedi_install.sh** s
         By @otorrillas
 
 Please, feel free to contribute if you! :blush:
-Either make a pull request or send me a message.
+Either make a pull request or send me a message.  
 If you find any bug, please, open a new **Issue**.
