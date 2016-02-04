@@ -9,7 +9,7 @@ $ ./comedi_install.sh
 ```
 
 :warning: At the installation of libComedi, you will need *root* permissions.  
-Python installation instructions at [Python Readme](https://github.com/otorrillas/liftComediLib/blob/master/driver_python/README.md)
+Python installation instructions at [Python Driver readme](https://github.com/otorrillas/liftComediLib/blob/master/driver_python/README.md)
 
 ### Languages supported
 
