@@ -8,7 +8,8 @@ For installing libComedi into your computer, you can run **comedi_install.sh** s
 $ ./comedi_install.sh
 ```
 
-:warning: At the installation of libComedi, you will need *root* permissions.
+:warning: At the installation of libComedi, you will need *root* permissions.  
+Python installation instructions at [Python Readme](https://github.com/otorrillas/liftComediLib/blob/master/driver_python/README.md)
 
 ### Languages supported
 
