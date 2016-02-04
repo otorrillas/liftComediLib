@@ -18,8 +18,7 @@ Python installation instructions at [Python Driver readme](https://github.com/ot
 - [ ] **Python** - Almost finished. Needs testing
 
 
-Please, feel free to contribute if you! :+1:  
-Either make a pull request or send me a message.  
+Please, feel free to contribute! :+1:  Ether make a pull request or contact me.  
 If you find any bug, please, open a new [issue](https://github.com/otorrillas/liftComediLib/issues).  
   
 #### Contributors
