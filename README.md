@@ -1,6 +1,6 @@
 liftComediLib
 ====
-LibComedy libraries for Lift interface at TTK4145 RealTimeProgramming Lab
+[Comedi](http://comedi.org:8000/index.html) wrapper for elevator control at [TTK4145] Real-Time Programming Lab (NTNU).
 
 For installing libComedi into your computer, you can run **comedi_install.sh** script:
 
