@@ -15,7 +15,7 @@ Python installation instructions at [Python Driver readme](https://github.com/ot
 
 - [x] **C** at [**TTK4145** repository](https://github.com/klasbo/TTK4145/tree/master/Project)
 - [x] **C++**  
-- [ ] **Python** - Still in development.
+- [ ] **Python** - Almost finished. Needs testing
 
 
 Please, feel free to contribute if you! :+1:  
