@@ -12,13 +12,14 @@ $ ./comedi_install.sh
 
 ### Languages supported
 
-- [x] **C**  
-        At [TTK4145 repository](https://github.com/klasbo/TTK4145/tree/master/Project)
+- [x] **C** at [**TTK4145** repository](https://github.com/klasbo/TTK4145/tree/master/Project)
 - [x] **C++**  
-            By @otorrillas
-- [ ] **Python**    
-        Still in development.  
-            By @otorrillas
+- [ ] **Python** - Still in development.
+
+
+#### Contributors
+- **C++**: @otorrillas
+- **Python**: @otorrillas
 
 Please, feel free to contribute if you! :blush:
 Either make a pull request or send me a message.  
