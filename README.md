@@ -5,18 +5,18 @@ LibComedy libraries for Lift interface at TTK4145 RealTimeProgramming Lab
 For installing libComedi into your computer, you can run **comedi_install.sh** script:
 
 ```bash
-./comedi_install.sh
+$ ./comedi_install.sh
 ```
 
 :warning: At the installation of libComedi, you will need *root* permissions.
 
 ### Languages supported
 
-- [x] C
+- [x] **C**  
         At [TTK4145 repository](https://github.com/klasbo/TTK4145/tree/master/Project)
-- [x] C++  
+- [x] **C++**  
             By @otorrillas
-- [ ] Python    
+- [ ] **Python**    
         Still in development.  
             By @otorrillas
 
