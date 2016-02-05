@@ -23,7 +23,7 @@ def main():
     	elif currFloor > 0:
     		panelInt.set_floor_indicator(currFloor)
 
-    	if panelInt.get_stop_signal():
+    	if panelInt.get_stop_signal() == 1:
     		elevInt.set_motor_direction(const.DIRN_STOP)
     		return 0
 
