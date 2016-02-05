@@ -9,13 +9,18 @@ $ ./comedi_install.sh
 ```
 
 :warning: At the installation of ComediLib, you will need *root* permissions.  
-Python installation instructions at [Python Driver readme](https://github.com/otorrillas/liftComediLib/blob/master/driver_python/README.md)
+**Python** is **NOT** installed by default. To have your ComediLib installed, you must meet the following requirements:  
+- Python dev package:  
+`# apt-get install python-dev`
+- Swig package:  
+`# apt-get install swig`  
+
 
 ### Languages supported
 
 - [x] **C** at [**TTK4145** repository](https://github.com/klasbo/TTK4145/tree/master/Project)
 - [x] **C++**  
-- [ ] **Python** - Almost finished. Needs testing
+- [x] **Python**
 
 
 Please, feel free to contribute! :+1:  Either make a pull request or contact me.  
