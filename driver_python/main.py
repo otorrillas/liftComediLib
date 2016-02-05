@@ -9,7 +9,7 @@ def main():
 
     print "Press STOP button to stop elevator and exit program.\n"
 
-    elevInt.set_motor_direction(const.DIRN_STOP)
+    elevInt.set_motor_direction(const.DIRN_UP)
 
     while True:
     	currFloor = elevInt.get_floor_sensor_signal()
