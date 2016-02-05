@@ -9,7 +9,7 @@ $ ./comedi_install.sh
 ```
 
 :warning: At the installation of ComediLib, you will need *root* permissions.  
-**Python** is **NOT** installed by default. To have your ComediLib installed, you must meet the following requirements:  
+**Python** Comedi library is **NOT** installed by default. To have ComediLib installed, you must meet the following requirements:  
 - Python dev package:  
 `# apt-get install python-dev`
 - Swig package:  
