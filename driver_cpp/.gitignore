@@ -27,8 +27,5 @@
 *.out
 *.app
 
-# Elevator
+# Elevator object
 elevator
-
-# Python driver
-driver_python
