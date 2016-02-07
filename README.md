@@ -19,7 +19,8 @@ $ ./comedi_install.sh
 ### Languages supported
 
 - [x] **C** at [**TTK4145** repository](https://github.com/klasbo/TTK4145/tree/master/Project)
-- [x] **C++**  
+- [x] **C++**
+- [x] **C#**
 - [x] **Python**
 
 
@@ -28,3 +29,4 @@ If you find any bug, please, open a new [issue](https://github.com/otorrillas/li
   
 #### Contributors
 [@otorrillas](https://github.com/otorrillas): C++, Python.  
+[@DanglingPointer](https://github.com/DanglingPointer) C#.
