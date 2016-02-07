@@ -28,5 +28,5 @@ Please, feel free to contribute! :+1:  Either make a pull request or contact me.
 If you find any bug, please, open a new [issue](https://github.com/otorrillas/liftComediLib/issues).  
   
 #### Contributors  
-[@DanglingPointer](https://github.com/DanglingPointer) C#.
+[@DanglingPointer](https://github.com/DanglingPointer) C#.  
 [@otorrillas](https://github.com/otorrillas): C++, Python.  
