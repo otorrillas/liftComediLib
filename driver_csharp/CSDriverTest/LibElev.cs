@@ -2,6 +2,7 @@
 // Methods are imported from the native shared library libelev.so
 // Remember to copy 'libelev.so' to the output directory (e.g. bin/Release/)
 // or to one of the directories specified by LD_LIBRARY_PATH
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 namespace Elev
 {
@@ -28,6 +29,13 @@ namespace Elev
         /// <param name="floor">Floor of lamp to set. Must be 0-3.</param>
         bool this[Button button, int floor]
         { set; }
+        /// <summary> Set to 'true' in order to turn on a button light on a given floor.
+        /// Throws InvalidEnumArgumentException if invalid button number passed. </summary>
+        /// <param name="button">Which type of lamp to set. Can be Button.Up,
+        /// Button.Down or Button.Command (button "inside" the elevator).</param>
+        /// <param name="floor">Floor of lamp to set. Must be 0-3.</param>
+        bool this[int button, int floor]
+        { set; }
     }
     /// <summary> Access to buttons </summary>
     public interface IButtonControl
@@ -38,6 +46,14 @@ namespace Elev
         /// <param name="floor">Which floor to check button. Must be 0-3.</param>
         /// <returns> 'False' if button is not pushed. 'True' if button is pushed.</returns>
         bool this[Button button, int floor]
+        { get; }
+        /// <summary> Checks if a specified button is pressed. Throws
+        /// InvalidEnumArgumentException if invalid button number passed. </summary>
+        /// <param name="button">Which button type to check. Can be Button.Up,
+        /// Button.Down or Button.Command (button "inside" the elevator).</param>
+        /// <param name="floor">Which floor to check button. Must be 0-3.</param>
+        /// <returns> 'False' if button is not pushed. 'True' if button is pushed.</returns>
+        bool this[int button, int floor]
         { get; }
     }
     /// <summary> Elevator car controller </summary>
@@ -55,12 +71,12 @@ namespace Elev
         int FloorSensorSignal
         { get; }
         /// <summary>
-        /// Returns 'true' if stop button is pushed, 'false' if not.
+        /// Returns 'true' if stop button is pushed
         /// </summary>
         bool StopSignal
         { get; }
         /// <summary>
-        /// Returns 'true' if obstruction is enabled, 'false' if not.
+        /// Returns 'true' if obstruction is enabled
         /// </summary>
         bool ObstructionSignal
         { get; }
@@ -95,7 +111,9 @@ namespace Elev
         { get; }
     }
     /// <summary>
-    /// Elevator and panel can be accessed through interfaces and static members only
+    /// Gives access to elevator car and panel through static methods. Non-static methods
+    /// are never to be called directly by user. User might want to change FloorCount
+    /// depending on the actual hardware.
     /// </summary>
     public class Elevator : ICar, IPanel
     {
@@ -201,6 +219,14 @@ namespace Elev
         {
             set { SetButtonLamp((int)button, floor, (value == true) ? 1 : 0); }
         }
+        public bool this[int button, int floor]
+        {
+            set
+            {
+                if (button < 0 || button > 2) throw new InvalidEnumArgumentException();
+                SetButtonLamp(button, floor, (value == true) ? 1 : 0);
+            }
+        }
         [DllImport("libelev.so", EntryPoint = "elev_set_button_lamp")]
         private static extern void SetButtonLamp(int button, int floor, int value);
     }
@@ -211,6 +237,14 @@ namespace Elev
         public bool this[Button button, int floor]
         {
             get { return (GetButtonSignal((int)button, floor) == 1) ? true : false; }
+        }
+        public bool this[int button, int floor]
+        {
+            get
+            {
+                if (button < 0 || button > 2) throw new InvalidEnumArgumentException();
+                return (GetButtonSignal(button, floor) == 1) ? true : false;
+            }
         }
         [DllImport("libelev.so", EntryPoint = "elev_get_button_signal")]
         private static extern int GetButtonSignal(int button, int floor);
