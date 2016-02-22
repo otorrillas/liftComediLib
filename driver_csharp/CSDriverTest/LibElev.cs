@@ -104,20 +104,26 @@ namespace Elev
         /// <summary>
         /// Returns elevator car control object
         /// </summary>
-        public static ICar GetElevator()
+        public static ICar GetCar()
         {
-            if (s_elevator == null)
-                s_elevator = new Elevator();
-            return s_elevator;
+            lock (s_mutex)
+            {
+                if (s_inst == null)
+                    s_inst = new Elevator();
+            }
+            return s_inst;
         }
         /// <summary>
         /// Returns elevator panel control object
         /// </summary>
         public static IPanel GetPanel()
         {
-            if (s_elevator == null)
-                s_elevator = new Elevator();
-            return s_elevator;
+            lock (s_mutex)
+            {
+                if (s_inst == null)
+                    s_inst = new Elevator();
+            }
+            return s_inst;
         }
 
     // ============USER API END=====================================================================
@@ -167,7 +173,8 @@ namespace Elev
 
         LampControl     m_buttonLamp;
         ButtonControl   m_buttonSignal;
-        static Elevator s_elevator = null;
+        static Elevator s_inst = null;
+        static object   s_mutex = new object();
 
         [DllImport("libelev.so", EntryPoint = "elev_init")]
         private static extern void Init();

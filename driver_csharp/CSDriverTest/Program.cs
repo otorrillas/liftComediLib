@@ -9,7 +9,7 @@ namespace Elev.Test
         {
             try
             {
-                ICar car = Elevator.GetElevator();
+                ICar car = Elevator.GetCar();
                 IPanel panl = Elevator.GetPanel();
 
                 // Extra: updating floor lights as the elevator passes by
